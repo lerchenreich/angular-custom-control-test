@@ -1,0 +1,12 @@
+ <div [formGroup]="parts">
+    <input matInput formControlName="inputControl" (change)="onChange($event)">
+      
+      <button mat-icon-button id="lookupButton" class="small-icon-button"  (click)="onLookup()">
+        <mat-icon>arrow_upward</mat-icon>
+    </button>
+    <button mat-icon-button id="assistButton" class="small-icon-button"  (click)="assistButtonClicked()">
+        <mat-icon>more_horiz</mat-icon>
+    </button>
+</div>
+
+
