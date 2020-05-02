@@ -5,11 +5,6 @@ import { MatFormFieldControl } from '@angular/material/form-field';
 import { FocusMonitor } from '@angular/cdk/a11y'
 import { coerceBooleanProperty } from  '@angular/cdk/coercion' 
 import { Subject } from 'rxjs'
-  
-
-//import { LookupDialogComponent, ILookupDialogData, ILookupDialogResult } from '../../lookup-dialog/lookup-dialog.component';
-//import { isDate, isUndefined } from 'util';
-
 
 /**
  * Lookupcontrol which provide a lookupfunctionallity an assist-button
@@ -53,13 +48,13 @@ abstract class LookupControl<T> extends MatFormFieldControl<T> implements Contro
   }
 
   ngAfterViewInit() {
-    /*
+   /*
     const lookupButton = this.elRef.nativeElement.querySelector(`button#lookupButton`)
     if (!isUndefined(this._lookupForColumn))
       lookupButton.setAttribute('style', 'display:block') 
     const assistButton = this.elRef.nativeElement.querySelector('button#assistButton')
     assistButton.setAttribute('style', this.assist.observers.length>0? 'display:block':'display:none') 
-  */
+   */
   }
   onContainerClick(event: MouseEvent): void {
     if ((event.target as Element).tagName.toLowerCase() != 'input') {
@@ -104,17 +99,7 @@ abstract class LookupControl<T> extends MatFormFieldControl<T> implements Contro
     this._required = coerceBooleanProperty(req);
     this.stateChanges.next();
   }
-/*
-  private _lookupForColumn : string[] //a splitter containing EntityName and ColumnName to lookup for
-  @Input()
-  get lookupFor() : string { return this._lookupForColumn.join('.') }
-  set lookupFor(lookupForColumn : string) {
-    if ( lookupForColumn && (lookupForColumn.lastIndexOf('.') > 0) && ( !this._lookupForColumn || this._lookupForColumn.join('.') !== this.lookupFor) ){
-      this._lookupForColumn = lookupForColumn.split('.', 2)
-      this.stateChanges.next();
-    }
-  } 
-*/
+
   private _disabled = false;
   @Input()
   get disabled(): boolean { return this._disabled; }
@@ -143,8 +128,7 @@ abstract class LookupControl<T> extends MatFormFieldControl<T> implements Contro
    */
   onChange(event:any){
     event.stopPropagation(); //setter "value" emits to the parent
-    var val = this.toValue(event.target.value)
-    this._onChange(val)
+    this._onChange(this.toValue(event.target.value))
   }
 
   private _onChange(val : T){
@@ -159,22 +143,11 @@ abstract class LookupControl<T> extends MatFormFieldControl<T> implements Contro
   @Output()
   change = new EventEmitter()
 
-
+  /**
+   * here we lookup some data
+   */
   onLookup() {
-    /*
-      var lookupData : ILookupDialogData = {
-        tableName : this._lookupForColumn[0],
-        columnName :  this._lookupForColumn[1],
-        currValue : this.value
-      }
-      const dialogRef = this.lookupDialog.open(LookupDialogComponent, {data : lookupData});
-      dialogRef.afterClosed().subscribe( lookupResult  => {
-        const result = lookupResult as ILookupDialogResult
-        if ( result.ok && (this.value !== result.selectedRow[result.key])){
-          this.value = result.selectedRow[result.key]
-        }
-      });
-      */
+    
   }
  
   assistButtonClicked(){

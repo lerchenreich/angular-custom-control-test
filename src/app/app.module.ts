@@ -14,7 +14,7 @@ import { CodeControlComponent} from './controls/lookup/lookup-control.components
   declarations: [
     AppComponent,
     CodeControlComponent,
-    //TestInAppModuleComponent
+    TestInAppModuleComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestInAppModuleComponent implements OnInit {
 
-  aValue : string = 'An AppModule value works'
+  aValue : string = 'In App.Module it works'
   
   constructor() { }
 
