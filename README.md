@@ -2,7 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
-Description
 A Custom control does not work in different ngModules. 
 For example, a custom-control declared in AppModule only works in components that are also declared in AppModule, but not in a lazy loaded component of another ngControl --> see errormessage. I think the purpose of a custom control is to use it in multiple components. 
 Since lazy loading is preferred for larger projects, custom controls should also work. 
