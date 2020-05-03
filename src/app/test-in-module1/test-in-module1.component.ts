@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-in-module1.component.css']
 })
 export class TestInModule1Component implements OnInit {
-  aValue : string = 'In modul 1 works'
+  aValue : string = 'In module 1 works'
   constructor() { }
 
   ngOnInit(): void {

@@ -1,14 +1,9 @@
 <mat-toolbar role="heading" color="primary">
     <span >{{title}}</span>
     <span class="fill-remaining-space"> </span>
-    <!--button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
-    <mat-menu #menu="matMenu">
-        <a mat-menu-item routerLink="/test-outside" >Control outside ngModule </a>
-        <a mat-menu-item routerLink="/test-inside" >Control inside of test-insde-module </a>
-    </mat-menu-->
-    <button mat-button routerLink="/test-in-appmodule">In App-Modul</button>  
-    <button mat-button routerLink="/test-in-module1">In Modul1</button>  
-    <button mat-button routerLink="/test-in-module2">In Modul2</button>  
+    <button mat-button routerLink="/test-in-appmodule">Both declared in AppModule</button>  
+    <button mat-button routerLink="/test-in-module1">In different Modules declared</button>  
+    <button mat-button routerLink="/test-in-module2">Both declared in Module2</button>  
 </mat-toolbar>
 
 <router-outlet></router-outlet>

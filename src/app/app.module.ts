@@ -8,7 +8,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { MaterialModule} from '../material-module';
 import { TestInAppModuleComponent } from './test-in-appmodule/test-in-appmodule.component'
-import { CodeControlComponent} from './controls/lookup/lookup-control.components'
+import { CodeControlComponent } from './controls/lookup/lookup-control.components';
 
 @NgModule({
   declarations: [

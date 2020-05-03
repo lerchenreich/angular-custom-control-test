@@ -5,10 +5,11 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { MaterialModule} from '../../material-module';
 import { TestInModule2RoutingModule } from './test-in-module2-routing.module';
 import { TestInModule2Component } from './test-in-module2.component';
+import { CodeControl2Component } from '../controls/lookup/lookup-control.components';
 
 
 @NgModule({
-  declarations: [TestInModule2Component],
+  declarations: [TestInModule2Component, CodeControl2Component],
   imports: [
     CommonModule,
     MaterialModule,
