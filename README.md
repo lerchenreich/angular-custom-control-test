@@ -1,27 +1,22 @@
 # AngularCustomControlTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:3041/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+1. Serve the project (VS-Code F5)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Press Button "Both declared in App-Module" --> hurra it works: the control shows "IN APP.MODULE IT WORKS"
+(The control and the component are declared in AppModule)
 
-## Build
+3. Press Button "In different Modules declared" --> ERROR: debug-console shows the error below
+(the control is declared in AppModule, the component in lazy loaded Module1)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4. Press Button "Both declared in Module 2! --> ERROR: debug-console shows the error below
+(the control and the component are declared in lazy loaded Module2)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The Attribute "ngDefaultControl" heals the error "No value accessor for form control with unspecified name attribute"
+An attribute like "matInput" which ist already defined in the control don't help
