@@ -26,4 +26,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:3041/`. The app w
 
 
 The Attribute "ngDefaultControl" heals the error "No value accessor for form control with unspecified name attribute"
-An attribute like "matInput" which ist already defined in the control don't help
+An attribute like "matInput" which ist already defined in the control doesn't help
